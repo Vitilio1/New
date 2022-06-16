@@ -1,0 +1,36 @@
+
+body{
+    background-color: rgb(209, 234, 248);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100px;
+    font-family: Arial; 
+}
+ #container{
+    flex-direction: column; 
+    width: 500px;
+    border:inset;
+    padding: 10px;
+    border-color: rgb(143, 143, 248);
+    width: 220px;
+    height: 50px;   
+    background-color: rgb(143, 241, 129);
+    border-radius: 10px;
+}
+.input{
+    box-sizing: border-box;
+}
+.newRow{
+    display:block;
+    flex-wrap: wrap;
+    border: 10px;
+    background-color: rgb(243, 230, 49);
+    margin: 30px;
+    padding: 0px;
+}
+#delete{
+    height: 20px;
+    margin-right: 50px;
+}
+
