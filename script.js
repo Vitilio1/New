@@ -17,7 +17,7 @@ btn.addEventListener('click',function(){
     div.innerHTML=`
     <div class='Tasks'>
     <ul id='todo'>`+input.value+`</ul>
-    <button id=delete></button>
+    <button id=delete>`del`</button>
     </div>
     `;
     htmlblocks.appendChild(div);
