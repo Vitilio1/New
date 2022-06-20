@@ -6,9 +6,10 @@ let btn=document.querySelector('#btn');
 let htmlblocks=document.querySelector('#container');
 
 let Tasks=[];
-btn.addEventListener('click',function(){
+btn.addEventListener('click',function (){
+    Task_id = Tasks.length;
     Tasks.push([
-        Date.now(),//id
+        Task_id,//id
         input.value,//text
         false,//checked
     ])
@@ -17,21 +18,13 @@ btn.addEventListener('click',function(){
     div.innerHTML=`
     <div class='Tasks'>
     <ul id='todo'>`+input.value+`</ul>
-    <button id=delete>`del`</button>
+    <button id="close_`+Task_id+`" >&times;</button>
     </div>
     `;
     htmlblocks.appendChild(div);
-})
+    let del = document.querySelector('#close_'+Task_id);
+    del.addEventListener('click',function(){
+        del.parentElement.remove();
+    })
+});
 
-
-//btn.onclick = function(){
-//    console.log(input.value);
-//}
-//btn.addEventListener('click',function(){
-//    let Todo={
-//        id:Date.now(),
-//        Text:input.value,
-//        checked:false,
-//    } 
-//}) 
-//Todos.push(Todo);
